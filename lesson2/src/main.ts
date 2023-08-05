@@ -71,13 +71,25 @@ let JP: Person = {   // works
 // const greetGituars = (guitars: Person) => {
 //     return `Hello ${guitars.name?.toUpperCase()}`
 // }
-
 const greetGituars = (guitars: Person) => {
     if(guitars.name) {
         return `Hello ${guitars.name.toUpperCase()}`
     }
     return `Hello I don't know your name`
 }
-
-
 console.log(greetGituars(JP));
+// Enum
+enum Color1 {
+    Red,    // 0
+    Green,  // 1    
+    Blue    // 2
+}
+ // auto notation
+enum Color2 {
+    Red = 1,    // 1
+    Green,  // 2    
+    Blue    // 3
+}
+
+console.log(Color1.Red)  // 0
+console.log(Color2.Red)  // 1
