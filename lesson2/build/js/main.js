@@ -40,3 +40,8 @@ let JP = {
 };
 // person2.age =  '33'   // error
 // person2 = JP // works
+// pass object with specific type as argument to function
+const greetGituars = (guitars) => {
+    return `Hello ${guitars.name}`;
+};
+console.log(greetGituars(JP));

@@ -38,7 +38,13 @@ const exampleObject = { name: 'Van Halen', age: 40, isBand: true }
 exampleObject.name = 'Van Halen II'
 // exampleObject.age = true    // error
 
-type Person = {
+// type Person = {
+//     name: string,
+//     age?: number,
+//     isBand: boolean,
+//     albums: (string | number)[]
+// }
+interface Person {
     name: string,
     age?: number,
     isBand: boolean,
@@ -59,3 +65,9 @@ let JP: Person = {   // works
 
 // person2.age =  '33'   // error
 // person2 = JP // works
+
+// pass object with specific type as argument to function
+const greetGituars = (guitars: Person) => {
+    return `Hello ${guitars.name}`
+}
+console.log(greetGituars(JP));
