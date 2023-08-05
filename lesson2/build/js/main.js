@@ -35,6 +35,7 @@ let person2 = {
 };
 let JP = {
     name: 'Jimmy',
+    age: 44,
     isBand: true,
     albums: ['I', 'II', 1989]
 };
@@ -42,6 +43,7 @@ let JP = {
 // person2 = JP // works
 // pass object with specific type as argument to function
 const greetGituars = (guitars) => {
-    return `Hello ${guitars.name}`;
+    var _a;
+    return `Hello ${(_a = guitars.name) === null || _a === void 0 ? void 0 : _a.toUpperCase()}`;
 };
 console.log(greetGituars(JP));

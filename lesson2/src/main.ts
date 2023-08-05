@@ -45,8 +45,8 @@ exampleObject.name = 'Van Halen II'
 //     albums: (string | number)[]
 // }
 interface Person {
-    name: string,
-    age?: number,
+    name?: string,
+    age: number,
     isBand: boolean,
     albums: (string | number)[]
 }
@@ -59,6 +59,7 @@ let person2: Person = {   // works
 }
 let JP: Person = {   // works
     name: 'Jimmy',
+    age: 44,
     isBand: true,
     albums: ['I', 'II', 1989]
 }
@@ -68,6 +69,6 @@ let JP: Person = {   // works
 
 // pass object with specific type as argument to function
 const greetGituars = (guitars: Person) => {
-    return `Hello ${guitars.name}`
+    return `Hello ${guitars.name?.toUpperCase()}`
 }
 console.log(greetGituars(JP));
