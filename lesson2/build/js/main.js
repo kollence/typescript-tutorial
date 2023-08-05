@@ -35,8 +35,8 @@ let person2 = {
 };
 let JP = {
     name: 'Jimmy',
-    age: 45,
     isBand: true,
     albums: ['I', 'II', 1989]
 };
-person2 = JP;
+// person2.age =  '33'   // error
+// person2 = JP // works

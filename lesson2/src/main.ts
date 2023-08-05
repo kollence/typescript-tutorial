@@ -40,7 +40,7 @@ exampleObject.name = 'Van Halen II'
 
 type Person = {
     name: string,
-    age: number,
+    age?: number,
     isBand: boolean,
     albums: (string | number)[]
 }
@@ -53,9 +53,9 @@ let person2: Person = {   // works
 }
 let JP: Person = {   // works
     name: 'Jimmy',
-    age: 45,
     isBand: true,
     albums: ['I', 'II', 1989]
 }
 
-person2 = JP 
+// person2.age =  '33'   // error
+// person2 = JP // works
