@@ -42,8 +42,13 @@ let JP = {
 // person2.age =  '33'   // error
 // person2 = JP // works
 // pass object with specific type as argument to function
+// const greetGituars = (guitars: Person) => {
+//     return `Hello ${guitars.name?.toUpperCase()}`
+// }
 const greetGituars = (guitars) => {
-    var _a;
-    return `Hello ${(_a = guitars.name) === null || _a === void 0 ? void 0 : _a.toUpperCase()}`;
+    if (guitars.name) {
+        return `Hello ${guitars.name.toUpperCase()}`;
+    }
+    return `Hello I don't know your name`;
 };
 console.log(greetGituars(JP));

@@ -76,7 +76,7 @@ const greetGituars = (guitars: Person) => {
     if(guitars.name) {
         return `Hello ${guitars.name.toUpperCase()}`
     }
-    // return `Hello I don't know your name`
+    return `Hello I don't know your name`
 }
 
 
