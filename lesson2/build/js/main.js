@@ -52,3 +52,19 @@ const greetGituars = (guitars) => {
     return `Hello I don't know your name`;
 };
 console.log(greetGituars(JP));
+// Enum
+var Color1;
+(function (Color1) {
+    Color1[Color1["Red"] = 0] = "Red";
+    Color1[Color1["Green"] = 1] = "Green";
+    Color1[Color1["Blue"] = 2] = "Blue"; // 2
+})(Color1 || (Color1 = {}));
+// auto notation
+var Color2;
+(function (Color2) {
+    Color2[Color2["Red"] = 1] = "Red";
+    Color2[Color2["Green"] = 2] = "Green";
+    Color2[Color2["Blue"] = 3] = "Blue"; // 3
+})(Color2 || (Color2 = {}));
+console.log(Color1.Red); // 0
+console.log(Color2.Red); // 1
